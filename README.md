@@ -1,2 +1,0 @@
-# BITS-CIRCUITOS
-Uml Unad
