@@ -1,0 +1,35 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+#siteNav{
+	padding: 100px, 100px, 100px, 100px;
+}
+
+.nav > li{
+	float: left;
+}
+
+#siteNav .nav li a{
+	background: #FFFFFF;
+	color: #3155F6;
+	display: block;
+	border: 1px solid;
+	padding: 10px 12px;
+}
+
+#siteNav .nav li a:hover{
+	background: #FFFFFF;
+}
+
+#siteNav li ul{
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+#siteNav li:hover > ul{
+	display: block;
+}
