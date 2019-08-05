@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang ="es">
+<head>
+<META charset ="uft-8"/>
+<meta description = "Descripcion de sitio"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/estilos.css"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/nav.css"/>
+<!--/-->
+<title> BITS & CIRCUITOS </title>
+<script type="text/javascript">
+    function mensaje_1()
+    {
+            alert("Venta Registrada correctamente");
+    }
+	
+	function cambio(){
+		var formas = document.getElementById("forma");//cogemos los campos
+		var tc1 = document.getElementById("t1");
+		var tc2 =document.getElementById("p1");
+		var tc3 = document.getElementById("t2");
+		var tc4 =document.getElementById("p2");
+		var tc5 = document.getElementById("t3");
+		var tc6 =document.getElementById("p3");
+		var tc7 = document.getElementById("t4");
+		var tc8 =document.getElementById("p4");
+	if(formas.selectedIndex!= 1){//si no escogió casado
+		  tc1.style.visibility="visible"
+		tc2.style.visibility="visible"
+		tc3.style.visibility="hidden"
+		tc4.style.visibility="hidden"
+		tc5.style.visibility="hidden"
+		tc6.style.visibility="hidden"
+		tc7.style.visibility="hidden"
+		tc8.style.visibility="hidden"
+   }else{//si escogió casado
+		tc1.style.visibility="hidden"
+		tc2.style.visibility="hidden"
+		tc3.style.visibility="visible"
+		tc4.style.visibility="visible"
+		tc5.style.visibility="visible"
+		tc6.style.visibility="visible"
+		tc7.style.visibility="visible"
+		tc8.style.visibility="visible"
+ }
+}
+
+
+function borrar()
+    {
+        var t1 = document.getElementById("t2");
+		var t2 =document.getElementById("p2");
+		t1.style.visibility="hidden"
+		t2.style.visibility="hidden"
+		t1 = document.getElementById("t3");
+		t2 =document.getElementById("p3");
+		t1.style.visibility="hidden"
+		t2.style.visibility="hidden"
+		t1 = document.getElementById("t4");
+		t2 =document.getElementById("p4");
+		t1.style.visibility="hidden"
+		t2.style.visibility="hidden"
+    }
+	
+    </script>
+
+
+</head>
+
+<body onload ="borrar()">
+
+<header >
+   <h1>BITS & CIRCUITOS </h1>
+<figure>   
+    <img src="media/logo.png"
+         alt="logoempresa">
+    <figcaption>Productos </figcaption>
+</figure>
+</header>
+
+
+<nav id="siteNav">
+	<ul class="nav">
+	   <li id="active"><a href="index.html" class="active daddy main-node">Inicio</a></li>
+	   <li><a href="#">Compras</a>
+	   <ul class="other-section">
+	      <li><a href="compraem.html" class="no-ch">Empleados</a></li>
+	      <li><a href="comprac.html" class="no-ch">Carrito de compras</a></li>
+	   </ul>
+	   </li>
+<li><a href="#">Inventario</a>
+	    <ul class="other-section">
+	      <li><a href="reporte.html" class="no-ch">Reporte</a></li>
+	   </ul>
+	   </li>
+	  <li><a href="pendiente.html" class="daddy">Quienes somos</a>
+	   </li>
+
+	</ul>
+
+</nav>
+<br>
+<br>
+
+<section id = "fondo">
+
+<hgroup>
+<h1> Registro ventas</h1>
+<!--<h2> encabezado sssd </h2>-->
+</hgroup>
+
+<section id = "sec_art2" >
+<article>
+<!-- Este es un articulo de contenido-->
+
+<form name="formulario" method="post" >
+
+Ingresar cliente: <input type="text" name="fname"><br>
+<br>
+ <!-- <input type="submit" value="Submit">-->
+  <!-- Lista de selección -->
+  Selecciona producto:
+  <select name="combo1">
+    <!-- Opciones de la lista -->
+    <option value="1">Producto 1</option>
+    <option value="2" selected>Producto 2</option> <!-- Opción por defecto -->
+    <option value="3">Producto 3</option>
+	<option value="3">Producto 4</option>
+	<option value="3">Producto 5</option>
+	<option value="3">Producto 6</option>
+  </select>
+</form>
+<br>
+Seleccione forma de pago:
+<select id="forma" name="combo2" onchange="cambio()">
+    <!-- Opciones de la lista -->
+    <option value="1" selected>Efectivo</option>
+    <option value="2" >Tarjeta</option> 
+  </select>
+<br>
+<br>
+<p id="p1">Ingresar valor pago: <input id="t1" type="text" name="fname"> <br> </P>
+
+<p id="p2"> Ingresar tarjeta de cr&eacutedito: <input id="t2" type="tarjeta" name="fname"><br></p>
+<br>
+<p id="p3"> C&oacutedigo de seguridad:  <input id="t3" type="tarjeta" name="fname"><br>
+<br>
+<p id="p4"> Numero de cuotas: 
+<select  id="t4"  name="combo2">
+    <!-- Opciones de la lista -->
+    <option value="1">1</option><option value="2">2</option> 
+    <option value="3">6</option><option value="3" selected>12</option>
+	<option value="3">18</option><option value="3">24</option>
+	<option value="3">30</option><option value="3">36</option>
+  </select>
+  </P>
+
+
+
+
+<br><br>
+<a id="pago" href="#" class="myButton" onclick = "mensaje_1()">Registrar Venta</a>
+
+</article>
+
+</section>
+<!--<aside>
+
+</aside>-->
+
+</section>
+
+
+<footer>
+BITS & CIRCUITOS  - Prototipo 
+</footer>
+
+
+</body>
+
+</html>
